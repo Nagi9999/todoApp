@@ -40,7 +40,7 @@ export default function TodoItem({ todo, deleteTodo }) {
 
       <Pressable onPress={handleDelete}>
         <View>
-          <Icon name="delete" size={30} color="blue" />
+          <Icon name="delete" size={30} color="red" />
         </View>
       </Pressable>
     </View>
