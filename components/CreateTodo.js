@@ -44,11 +44,11 @@ export default function CreateTodo({ addTodo }) {
 
   return (
     <View style={styles.container}>
-      <View style={styles.createStyle} >
+      <View style={styles.createStyle}>
         <Button
           title="ADD NEW TODO"
           onPress={() => setIsModalVisible(true)}
-          color={"white"}          
+          color={"white"}
         />
       </View>
 
@@ -66,12 +66,16 @@ export default function CreateTodo({ addTodo }) {
             <Text style={styles.requiredText}>Required</Text>
           )}
           <View style={styles.btnModal}>
-            <Button title="Add Todo" onPress={handleSubmit} color="blue" />
-            <Button
-              title="Cancel"
-              onPress={() => setIsModalVisible(false)}
-              color="red"
-            />
+            <View style={styles.btnAdd} >
+              <Button title="Add Todo" onPress={handleSubmit} color="blue" />
+            </View>
+            <View style={styles.btnCancel}>
+              <Button
+                title="Cancel"
+                onPress={() => setIsModalVisible(false)}
+                color="red"
+              />
+            </View>
           </View>
         </SafeAreaView>
       </Modal>
@@ -87,7 +91,6 @@ const styles = StyleSheet.create({
     padding: 6,
     backgroundColor: "green",
     fontSize: 18,
-    
   },
   modalStyle: {
     flex: 1,
@@ -113,4 +116,10 @@ const styles = StyleSheet.create({
     marginBottom: 5,
     marginLeft: 10,
   },
+  btnAdd:{
+    backgroundColor:"blue"
+  },
+  btnCancel:{
+    backgroundColor:"red"
+  }
 });
