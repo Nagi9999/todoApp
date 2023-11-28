@@ -67,13 +67,13 @@ export default function CreateTodo({ addTodo }) {
           )}
           <View style={styles.btnModal}>
             <View style={styles.btnAdd} >
-              <Button title="Add Todo" onPress={handleSubmit} color="blue" />
+              <Button title="Add Todo" onPress={handleSubmit} color="white" />
             </View>
             <View style={styles.btnCancel}>
               <Button
                 title="Cancel"
                 onPress={() => setIsModalVisible(false)}
-                color="red"
+                color="white"
               />
             </View>
           </View>
@@ -117,9 +117,17 @@ const styles = StyleSheet.create({
     marginLeft: 10,
   },
   btnAdd:{
-    backgroundColor:"blue"
+    backgroundColor:"blue",
+    margin:16,
+    padding:5,
+    borderRadius:5
+
+
   },
   btnCancel:{
-    backgroundColor:"red"
+    backgroundColor:"red",
+    margin:16,
+    padding:5,
+    borderRadius:5
   }
 });
