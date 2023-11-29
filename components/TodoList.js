@@ -2,7 +2,6 @@ import { FlatList, StyleSheet, Text, View } from "react-native";
 import TodoItem from "./TodoItem";
 
 export default function TodoList({ todos, deleteTodo }) {
-
   return (
     <View style={styles.todoList}>
       <FlatList
@@ -20,10 +19,10 @@ export default function TodoList({ todos, deleteTodo }) {
 const styles = StyleSheet.create({
   todoList: {
     marginVertical: 50,
-    height: 400
+    height: 450,
   },
   list: {
     justifyContent: "space-between",
-    marginTop: 50,
+    marginBottom: 50,
   },
 });

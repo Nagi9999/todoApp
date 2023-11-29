@@ -66,7 +66,7 @@ export default function CreateTodo({ addTodo }) {
             <Text style={styles.requiredText}>Required</Text>
           )}
           <View style={styles.btnModal}>
-            <View style={styles.btnAdd} >
+            <View style={styles.btnAdd}>
               <Button title="Add Todo" onPress={handleSubmit} color="white" />
             </View>
             <View style={styles.btnCancel}>
@@ -116,18 +116,16 @@ const styles = StyleSheet.create({
     marginBottom: 5,
     marginLeft: 10,
   },
-  btnAdd:{
-    backgroundColor:"blue",
-    margin:16,
-    padding:5,
-    borderRadius:5
-
-
+  btnAdd: {
+    backgroundColor: "blue",
+    margin: 16,
+    padding: 5,
+    borderRadius: 5,
   },
-  btnCancel:{
-    backgroundColor:"red",
-    margin:16,
-    padding:5,
-    borderRadius:5
-  }
+  btnCancel: {
+    backgroundColor: "red",
+    margin: 16,
+    padding: 5,
+    borderRadius: 5,
+  },
 });

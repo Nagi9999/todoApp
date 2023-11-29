@@ -1,11 +1,13 @@
 import { useState, useEffect } from "react";
 import { Text, View, StyleSheet, Pressable, Alert } from "react-native";
 import Icon from "react-native-vector-icons/AntDesign";
+
 export default function TodoItem({ todo, deleteTodo }) {
   const [isCompleted, setIsCompleted] = useState(todo.completed);
   useEffect(() => {
     setIsCompleted(todo.completed);
   }, [todo.completed]);
+
   const handlePress = () => {
     setIsCompleted(!isCompleted);
     console.log("Updated completed status:", !isCompleted);
@@ -50,9 +52,9 @@ export default function TodoItem({ todo, deleteTodo }) {
 const styles = StyleSheet.create({
   container: {
     flexDirection: "row",
-    justifyContent: "space-between",
-    alignItems: "baseline",
-    margin: 15,
+    justifyContent: "space-evenly",
+    alignItems: "center",
+    marginVertical: 25,
   },
 
   txtNotCompleted: {
